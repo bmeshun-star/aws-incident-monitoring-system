@@ -19,7 +19,7 @@ This project demonstrates a real-world automated monitoring system. It uses AWS 
 **Alert:** A notification is sent to the administrator via email/SNS.
 
 
-## :camera_with_flash: Screenshots
+## :Screenshots
 
 ### 1. Infrastructure Setup
 The EC2 instance is successfully provisioned and running the web server.
