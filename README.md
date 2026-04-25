@@ -19,7 +19,7 @@ This project demonstrates a real-world automated monitoring system. It uses AWS 
 **Alert:** A notification is sent to the administrator via email/SNS.
 
 
-## :Screenshots
+## Screenshots
 
 ### 1. Infrastructure Setup
 The EC2 instance is successfully provisioned and running the web server.
@@ -39,3 +39,11 @@ Launch an EC2 instance with an Apache/Nginx server.
 Create a CloudWatch Alarm for that instance.
 Set the threshold for "Status Check Failed > 0".
 Configure an SNS topic to email you when the state is in "ALARM".
+
+## :hammer_and_wrench: Incident Resolution (Cleanup)
+Once the alarm was successfully triggered and verified, I manually resolved the high CPU incident to bring the instance back to a healthy state.
+
+**Identify the Process:** Used the `top` command to verify that the `yes` processes were consuming the CPU.
+**Terminate the Simulation:** Ran the following command to kill all running `yes` processes:
+   ```bash
+   sudo killall yes
